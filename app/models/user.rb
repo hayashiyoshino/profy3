@@ -39,6 +39,8 @@ class User < ApplicationRecord
   def full_profile?
     image.present? && family_name? && first_name? && family_name_kana? && first_name_kana?
   end
+  #カラム名+？と書くと、指定したカラムに値が存在しないときにfalseを返すと言うActiverecordの機能を利用しました。
+  #別の書き方としてpresentメソッドを利用しても構いません。
 
   private
   def has_group_key?
