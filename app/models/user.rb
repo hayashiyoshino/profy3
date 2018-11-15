@@ -5,6 +5,8 @@ class User < ApplicationRecord
 
   belongs_to :group
 
+  has_one_attached :image
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable,
          authentication_keys: [:email, :group_key]
