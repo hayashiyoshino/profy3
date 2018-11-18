@@ -4,6 +4,7 @@ class User < ApplicationRecord
   attr_accessor :group_key
 
   belongs_to :group
+  has_many :questions, ->{order("created_at DESC")}
 
   has_one_attached :image
 
