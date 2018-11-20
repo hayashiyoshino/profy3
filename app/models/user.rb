@@ -6,6 +6,7 @@ class User < ApplicationRecord
   belongs_to :group
   has_many :questions, ->{order("created_at DESC")}
   has_many :answers, ->{order("updated_at DESC")}
+  has_many :answered_questions, through: :answers, source: :question
 
   has_one_attached :image
 

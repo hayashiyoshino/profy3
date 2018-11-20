@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
-    @questions = @user.answerd_questions.uniq
+    @questions = @user.answered_questions.uniq
   end
 
   def edit
