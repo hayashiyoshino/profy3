@@ -1,7 +1,7 @@
 class Question < ApplicationRecord
   after_create :create_feed_content
 
-  attr_accessor :importance
+  # attr_accessor :importance
 
   belongs_to :user
   belongs_to :group
