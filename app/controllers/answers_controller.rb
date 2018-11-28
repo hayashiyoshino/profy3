@@ -19,7 +19,7 @@ class AnswersController < ApplicationController
   def update
     answer = Answer.find(params[:id])
     @question = answer.question
-    answer.pudate(update_params)
+    answer.upudate(update_params)
   end
 
 
