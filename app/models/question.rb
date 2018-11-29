@@ -3,6 +3,7 @@ class Question < ApplicationRecord
 
   # attr_accessor :importance
 
+
   belongs_to :user
   belongs_to :group
   has_many :answers
